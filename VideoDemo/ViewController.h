@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+- (IBAction)captureVideo:(id)sender;
+
+@property (strong, nonatomic) NSURL *videoURL;
+@property (strong, nonatomic) MPMoviePlayerController *videoController;
 
 @end
 
